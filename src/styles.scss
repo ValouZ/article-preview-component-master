@@ -1,0 +1,9 @@
+@import './placeholders';
+
+body{
+  height: 100vh;
+  background: #333333;
+  color: whitesmoke;
+  @extend %flex-center;
+}
+
