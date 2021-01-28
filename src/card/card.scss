@@ -1,0 +1,31 @@
+.card {
+  overflow: hidden;
+  background: white;
+  width: 327px;
+  border-radius: 10px;
+  box-shadow: 0px 40px 40px -10px rgba(201, 213, 225, 0.503);
+  @include flex(column);
+
+  h1,
+  h2 {
+    font-size: 16px;
+    color: $very-dark-grayish-blue;
+    font-weight: 700;
+    line-height: 24px;
+  }
+  h2,
+  h3 {
+  font-size: 1em;
+  }
+  p {
+    color: $desaturated-dark-blue;
+    font-weight: 200;
+    line-height: 20px;
+  }
+}
+
+.image {
+  background: url(../images/drawers-mobile.jpg);
+  height: 200px;
+  width: 100%;
+}

@@ -1,9 +1,17 @@
-@import './placeholders';
+@import "./_variables";
+@import "./mixins";
+@import "./placeholders";
+@import "./body";
 
-body{
-  height: 100vh;
-  background: #333333;
-  color: whitesmoke;
-  @extend %flex-center;
+// Card files
+@import "./card/card";
+@import "./card/content";
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  a {
+    color: hsl(228, 45%, 44%);
+  }
 }
 

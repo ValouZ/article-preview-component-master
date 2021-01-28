@@ -1,0 +1,14 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $font;
+  font-size: $init-font-size;
+}
+
+body{
+  height: 100vh;
+  background: #333333; 
+  // background: $light-grayish-blue;
+  @include flex;
+}
