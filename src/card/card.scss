@@ -1,21 +1,27 @@
 .card {
-  overflow: hidden;
+  // overflow: hidden;
   background: white;
   width: 327px;
   border-radius: 10px;
-  box-shadow: 0px 40px 40px -10px rgba(201, 213, 225, 0.503);
+  box-shadow: 0px 40px 40px -10px rgba(109, 112, 116, 0.503);
   @include flex(column);
-
+  @include desktop {
+    width: 730px;
+    @include flex(row, space-between);
+  }
   h1,
   h2 {
     font-size: 16px;
     color: $very-dark-grayish-blue;
     font-weight: 700;
     line-height: 24px;
+    @include desktop {
+      font-size: 20px;
+    }
   }
   h2,
   h3 {
-  font-size: 1em;
+    font-size: 1em;
   }
   p {
     color: $desaturated-dark-blue;
@@ -25,7 +31,15 @@
 }
 
 .image {
+  border-radius: 10px 10px 0 0;
   background: url(../images/drawers-mobile.jpg);
   height: 200px;
   width: 100%;
+
+  @include desktop {
+    background: url(../images/drawers-desktop.jpg);
+    border-radius: 10px 0 0 10px;
+    height: 280px;
+    width: 285px;
+  }
 }

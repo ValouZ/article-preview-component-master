@@ -6,7 +6,7 @@
 }
 
 @mixin desktop {
-  @media(min-width:$desktop) {
+  @media(min-width:1440px) {
     @content;
   }
 }

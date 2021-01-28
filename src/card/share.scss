@@ -1,0 +1,65 @@
+.share {
+  opacity: 0;
+  @include flex(row, flex-start);
+  position: absolute;
+  bottom: -20px;
+  right: -32px;
+  background: $very-dark-grayish-blue;
+  width: 0;
+  height: 82px;
+  padding-left: 32px;
+  transition: $transition-share;
+  border-radius: 0 0 10px 10px;
+  @include desktop {
+    width: 248px;
+    height: 0;
+    border-radius: 10px;
+    bottom: 60px;
+    right: -106px;
+  }
+  h3 {
+    color: $grayish-blue;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-weight: 200;
+    padding-right: 23px;
+  }
+  .social {
+    @include flex(row, space-between);
+    width: 92px;
+  }
+  &.clicked {
+    opacity: 1;
+    width: calc(100% + calc(32px * 2));
+    @include desktop {
+      width: 248px;
+      height: 55px;
+    }
+  }
+
+  img {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.button-share {
+  z-index: 1;
+  outline: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 100%;
+  border: none;
+  transition: $transition-share;
+  path {
+    transition: $transition-share;
+    fill: $desaturated-dark-blue;
+  }
+  &:hover,
+  &.clicked {
+    background: $desaturated-dark-blue;
+    path {
+      fill: white;
+    }
+  }
+}
